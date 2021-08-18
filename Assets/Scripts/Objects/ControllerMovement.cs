@@ -34,14 +34,6 @@ public class ControllerMovement : MonoBehaviour
    		rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
    	}
 
-	public void LookAt(float x, float y, float z)
-	{
-		Debug.Log("Looking at: (" + x + ", " + y + ", " + z + ")");
-
-		Vector3 levelPoint = new Vector3(x, transform.position.y, z);
-		transform.LookAt(levelPoint);
-	}
-
 	public void LookAt(Vector3 lookPoint)
 	{
 		Vector3 levelPoint = new Vector3(lookPoint.x, transform.position.y, lookPoint.z);
